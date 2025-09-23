@@ -9,7 +9,7 @@ public class Q15CountWordFrequency {
         String s = "This is Java language and Java is versatile language language";
         Map<String, Long> collect = Arrays
                 .stream(s.split(" "))
-                .collect(Collectors.groupingBy(s1 -> s1.toLowerCase(), Collectors.counting()));
+                .collect(Collectors.groupingBy(String::toLowerCase, Collectors.counting()));
         System.out.println(collect);
     }
 }

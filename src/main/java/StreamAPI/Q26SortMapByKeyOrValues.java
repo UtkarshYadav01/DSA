@@ -16,6 +16,6 @@ public class Q26SortMapByKeyOrValues {
         map.entrySet()
                 .stream()
                 .sorted(Map.Entry.comparingByValue()).forEach(System.out::println);
-        System.out.println(map.entrySet());
+       // System.out.println(map.entrySet());
     }
 }
