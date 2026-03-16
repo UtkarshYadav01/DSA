@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-public class Q25PassFailStidents {
+public class Q25PassFailStudents {
     public static void main(String[] args) {
         List<Student> students = Arrays.asList(new Student("Narendra", 35),
                 new Student("Kiran", 70),

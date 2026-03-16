@@ -67,7 +67,9 @@ public class March11_2026Java8PracticeSet {
 
 
     // 1. Find the second largest number in a list
-    public Optional<Integer> findSecondLargest(List<Integer> list) { return Optional.empty(); }
+    public Optional<Integer> findSecondLargest(List<Integer> list) {
+        return Optional.empty();
+    }
 
     // 2. Find all even numbers in a list
     public List<Integer> getEvenNumbers(List<Integer> list) { return null; }
