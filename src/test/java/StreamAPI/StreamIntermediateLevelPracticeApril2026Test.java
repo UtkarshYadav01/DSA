@@ -14,6 +14,7 @@ class StreamIntermediateLevelPracticeApril2026Test {
             new StreamIntermediateLevelPracticeApril2026.Employee("Candace", "HR", 60000),
             new StreamIntermediateLevelPracticeApril2026.Employee("Bob", "IT", 90000),
             new StreamIntermediateLevelPracticeApril2026.Employee("David", "IT", 110000),
+            new StreamIntermediateLevelPracticeApril2026.Employee("Sam", "IT", 9000),
             new StreamIntermediateLevelPracticeApril2026.Employee("Alice", "HR", 70000),
             new StreamIntermediateLevelPracticeApril2026.Employee("Eric", "Sales", 50000));
 
@@ -68,6 +69,36 @@ class StreamIntermediateLevelPracticeApril2026Test {
     @DisplayName("Q6.Group employees by department and calculate average salary")
     void question6() {
         System.out.println(test.question6(employees));
+    }
+
+    @Test
+    @DisplayName("Q7.Find the highest-paid employee in each department")
+    void question11() {
+        System.out.println(test.question7(employees));
+    }
+
+    @Test
+    @DisplayName("Q8.Find All Departments with More than 2 Employees")
+    void question7() {
+        System.out.println(test.question8(employees));
+    }
+
+    @Test
+    @DisplayName("Q9.Find department with the highest average salary")
+    void question8() {
+        System.out.println(test.question9(employees));
+    }
+
+    @Test
+    @DisplayName("Q10.Find most frequent character in string")
+    void question9() {
+        System.out.println(test.question10("employees"));
+    }
+
+    @Test
+    @DisplayName("Q11.Find First non-repeating character in string")
+    void question10() {
+        System.out.println(test.question11("employees"));
     }
 
 }
