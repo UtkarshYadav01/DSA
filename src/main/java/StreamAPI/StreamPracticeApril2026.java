@@ -19,17 +19,16 @@ public class StreamPracticeApril2026 {
 
     //Q1.Sort List of Employees By Salary
     List<Employee> question1(List<Employee> list) {
+
+        //in reverse
+        list.stream()
+                .sorted(Comparator.comparing(Employee::salary).reversed())
+                .toList();
+
         return list.stream()
                 .sorted(Comparator.comparing(Employee::salary))
                 .toList();
 
-    }
-
-    //Q1B.Sort List of Employees By Salary in reverse order
-    List<Employee> question1B(List<Employee> list) {
-        return list.stream()
-                .sorted(Comparator.comparing(Employee::salary).reversed())
-                .toList();
     }
 
     //Q2.Calculate the avg age of a list of person Objects Using java Streams
@@ -278,34 +277,67 @@ public class StreamPracticeApril2026 {
     }
 
     //Q17.From a list of transactions, find the day with the highest total spend
-    void question17(List<Transaction> list) {
-        list.forEach(System.out::println);
+    Map.Entry<LocalDate, Double> question17(List<Transaction> list) {
+        return list.stream()
+                .collect(Collectors.groupingBy(
+                        Transaction::date,
+                        Collectors.summingDouble(Transaction::amount)
+                )).entrySet().stream()
+                .max(Map.Entry.comparingByValue())
+                .orElseThrow();
     }
 
     //Q18.Categorize employees based on their salary (Low/Medium/High) Using streams.
-    void question18() {
-
+    Map<String, List<Employee>> question18(List<Employee> list) {
+        return list.stream()
+                .collect(Collectors.groupingBy(
+                        e -> {
+                            if (e.salary() < 30000) return "Low";
+                            if (e.salary() < 50000) return "Medium";
+                            else return "High";
+                        }
+                ));
     }
 
     //Q19.Group characters by uppercase vs lowercase vs digit vs other
-    void question19() {
-
+    Map<String, List<Character>> question19(List<Character> list) {
+        return list.stream()
+                .collect(Collectors.groupingBy(
+                        e -> {
+                            if (Character.isUpperCase(e)) return "uppercase";
+                            if (Character.isLowerCase(e)) return "lowercase";
+                            if (Character.isDigit(e)) return "digit";
+                            else return "other";
+                        }
+                ));
     }
 
     //Q20.Find all employees who worked in 3+ Departments
-    void question20() {
-
+    List<Map.Entry<String, Long>> question20(List<Employee> list) {
+        return list.stream()
+                .collect(Collectors.groupingBy(
+                        Employee::name,
+                        Collectors.counting()
+                )).entrySet().stream()
+                .filter(e -> e.getValue() > 2)
+                .toList();
     }
 
     //Q21.Find bigram frequency(Pairs of consecutive words) in Paragraphs
-    void question21() {
+     Map<String, Long> question21(String paragraphs) {
+        String[] words = paragraphs.toLowerCase().replaceAll("[^a-z\\s]", "").split(" ");
 
+        return IntStream.range(0, words.length - 1)
+                .mapToObj(i -> words[i] + " " + words[i + 1])
+                .collect(Collectors.groupingBy(
+                        e -> e,
+                        Collectors.counting()
+                ));
     }
 
     void question() {
 
     }
-
 //    https://www.programiz.com/online-compiler/8mouLR64TzOu2
 }
 

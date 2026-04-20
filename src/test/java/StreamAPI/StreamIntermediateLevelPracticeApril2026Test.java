@@ -12,13 +12,17 @@ class StreamIntermediateLevelPracticeApril2026Test {
     StreamPracticeApril2026 test = new StreamPracticeApril2026();
 
     List<StreamPracticeApril2026.Employee> employees = List.of(
-            new StreamPracticeApril2026.Employee("Candace", "HR", 60000),
-            new StreamPracticeApril2026.Employee("Bob", "IT", 90000),
-            new StreamPracticeApril2026.Employee("David", "IT", 110000),
-            new StreamPracticeApril2026.Employee("Sam", "IT", 9000),
-            new StreamPracticeApril2026.Employee("Alice", "HR", 70000),
-            new StreamPracticeApril2026.Employee("Eric", "Sales", 50000),
-            new StreamPracticeApril2026.Employee("Adam","Salse",70000));
+            new StreamPracticeApril2026.Employee("Alice", "HR", 6000),
+            new StreamPracticeApril2026.Employee("Alice", "Sales", 6000),
+            new StreamPracticeApril2026.Employee("Alice", "Marketing", 6000),
+            new StreamPracticeApril2026.Employee("Bob", "IT", 21400),
+            new StreamPracticeApril2026.Employee("Charlie", "IT", 25000),
+            new StreamPracticeApril2026.Employee("Dave", "IT", 33000),
+            new StreamPracticeApril2026.Employee("Eric", "Salse", 90000),
+            new StreamPracticeApril2026.Employee("Eric", "IT", 90000),
+            new StreamPracticeApril2026.Employee("Eric", "Marketing", 90000),
+            new StreamPracticeApril2026.Employee("Eric", "HR", 90000),
+            new StreamPracticeApril2026.Employee("Adam", "Salse", 70000));
 
     List<StreamPracticeApril2026.Person> persons = List.of(
             new StreamPracticeApril2026.Person("Alice", 25),
@@ -41,18 +45,10 @@ class StreamIntermediateLevelPracticeApril2026Test {
     }
 
     @Test
-    @DisplayName("Q1B.Sort List of Employees By Salary in reverse order")
-    void question1B() {
-        System.out.println(test.question1B(employees));
-    }
-
-
-    @Test
     @DisplayName("Q2.Calculate the avg age of a list of person Objects Using java Streams")
     void question2() {
         System.out.println(test.question2(persons));
     }
-
 
     @Test
     @DisplayName("Q3.Partition numbers in Even and Odd List")
@@ -60,20 +56,17 @@ class StreamIntermediateLevelPracticeApril2026Test {
         System.out.println(test.question3(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)));
     }
 
-
     @Test
     @DisplayName("Q4.Group a list of words by their length using streams")
     void question4() {
         System.out.println(test.question4(Arrays.asList("Apple", "Banana", "Orange", "Pineapple", "Watermelon")));
     }
 
-
     @Test
     @DisplayName("Q5.Count the occurrence of each element in a list")
     void question5() {
         System.out.println(test.question5(Arrays.asList("Apple", "Banana", "Orange", "Orange", "Orange", "Orange", "Pineapple", "Watermelon", "Apple", "Banana")));
     }
-
 
     @Test
     @DisplayName("Q6.Group employees by department and calculate average salary")
@@ -112,7 +105,6 @@ class StreamIntermediateLevelPracticeApril2026Test {
     }
 
     //hard questions
-
     @Test
     @DisplayName("Q12.Find the most common first letter among all employee names")
     void question12() {
@@ -122,7 +114,7 @@ class StreamIntermediateLevelPracticeApril2026Test {
     @Test
     @DisplayName("Q13.Given a list of integers compute the average of every 3 element sliding window")
     void question13() {
-        System.out.println(test.question13(Arrays.asList(4,8,15,16,23,42),3));
+        System.out.println(test.question13(Arrays.asList(4, 8, 15, 16, 23, 42), 3));
     }
 
     @Test
@@ -146,36 +138,37 @@ class StreamIntermediateLevelPracticeApril2026Test {
     @Test
     @DisplayName("Q17.From a list of transactions, find the day with the highest total spend")
     void question17() {
-        test.question17(transactions);
+        System.out.println(test.question17(transactions));
     }
 
     @Test
     @DisplayName("Q18.Categorize employees based on their salary (Low/Medium/High) Using streams.")
     void question18() {
-        test.question18();
+        System.out.println(test.question18(employees));
     }
 
     @Test
     @DisplayName("Q19.Group characters by uppercase vs lowercase vs digit vs other")
     void question19() {
-        test.question19();
+        System.out.println(test.question19(Arrays.asList('A', 'b', '3', 'Z', 'x', '#', '7', 'm', '@')));
     }
 
     @Test
     @DisplayName("Q20.Find all employees who worked in 3+ Departments")
     void question20() {
-        test.question20();
+        System.out.println(test.question20(employees));
     }
 
     @Test
     @DisplayName("Q21.Find bigram frequency(Pairs of consecutive words) in Paragraphs")
     void question21() {
-        test.question21();
+        System.out.println(test.question21("Java is great and Java is fun. Java is powerful!"));
     }
 
     @Test
-    @DisplayName("")
+    @DisplayName("https://www.programiz.com/online-compiler/8mouLR64TzOu2")
     void question() {
         test.question();
     }
+
 }
