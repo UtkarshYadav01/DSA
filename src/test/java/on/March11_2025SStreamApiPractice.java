@@ -1,6 +1,6 @@
 package on;
 
-import StreamAPI.Java8PracticeSet;
+import StreamAPI.practice.Java8PracticeSet;
 
 import java.util.*;
 

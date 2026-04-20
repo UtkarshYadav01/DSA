@@ -1,4 +1,4 @@
-package StreamAPI.code_periodYTset;
+package StreamAPI.practice.code_periodYTset;
 
 import java.util.Arrays;
 import java.util.Comparator;

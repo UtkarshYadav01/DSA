@@ -1,7 +1,6 @@
-package StreamAPI;
+package StreamAPI.practice;
 
 import java.util.*;
-import java.util.stream.*;
 
 public class Java8PracticeSet {
 

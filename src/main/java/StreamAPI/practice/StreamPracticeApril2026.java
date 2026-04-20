@@ -1,4 +1,4 @@
-package StreamAPI;
+package StreamAPI.practice;
 
 import java.time.LocalDate;
 import java.util.*;
@@ -324,7 +324,7 @@ public class StreamPracticeApril2026 {
     }
 
     //Q21.Find bigram frequency(Pairs of consecutive words) in Paragraphs
-     Map<String, Long> question21(String paragraphs) {
+    Map<String, Long> question21(String paragraphs) {
         String[] words = paragraphs.toLowerCase().replaceAll("[^a-z\\s]", "").split(" ");
 
         return IntStream.range(0, words.length - 1)

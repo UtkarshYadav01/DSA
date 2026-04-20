@@ -1,4 +1,4 @@
-package StreamAPI;
+package StreamAPI.practice;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -7,7 +7,7 @@ import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.List;
 
-class StreamIntermediateLevelPracticeApril2026Test {
+class StreamPracticeApril2026Test {
 
     StreamPracticeApril2026 test = new StreamPracticeApril2026();
 
@@ -166,9 +166,10 @@ class StreamIntermediateLevelPracticeApril2026Test {
     }
 
     @Test
-    @DisplayName("https://www.programiz.com/online-compiler/8mouLR64TzOu2")
+    @DisplayName("Future Questions")
     void question() {
         test.question();
+        System.out.println("https://www.programiz.com/online-compiler/8mouLR64TzOu2");
     }
 
 }
